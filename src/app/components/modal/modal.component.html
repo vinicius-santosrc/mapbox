@@ -1,0 +1,47 @@
+<section class="modal">
+    <div class="modalHeader">
+      <h1>Cerca virtual</h1>
+      <p>
+        Desenha a cerca virtual utilizando a ferramenta de linhas ou circular:
+      </p>
+    </div>
+    <div class="modalContent">
+      <div id="map" class="map" style="width: 100%; height: 100%"></div>
+      <div class="modalContent-options">
+        <button
+          (click)="setOptionDraw('polygon')"
+          [ngClass]="{ selected: (optionDraw$ | async) === 'polygon' }"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="(optionDraw$ | async) === 'polygon' ? 'white' : 'black'"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 20V15H15V17H9V15H7V9H9V7H15V9H20V4H15V6H9V4H4V9H6V15H4V20H9V18H15V20H20ZM17.925 5H19V8H16V5H17.925ZM5 8V5H8V8H5ZM7.25 19H5V16H8V19H7.25Z"
+              fill="(optionDraw$ | async) === 'polygon' ? 'white' : 'black'"
+            />
+          </svg>
+        </button>
+        <button
+          (click)="setOptionDraw('circle')"
+          [ngClass]="{ selected: (optionDraw$ | async) === 'circle' }"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="8" cy="8" r="7.5" stroke="black" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="btnSave">
+        <button><span>Salvar</span></button>
+    </div>
+  </section>

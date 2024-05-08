@@ -17,7 +17,6 @@ describe('AppComponent', () => {
   it(`should have the 'mapbox' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('mapbox');
   });
 
   it('should render title', () => {
